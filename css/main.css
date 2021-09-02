@@ -1,0 +1,842 @@
+:root
+{
+    --main-color: #FF9800;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    height: 4000px;
+}
+
+.scroll-to-top a i
+{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #FFF;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: block;
+    z-index: 999999;
+}
+
+.container 
+{
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+/* Start Settings Box  */
+.settings-box 
+{
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: #FFF;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: .3s;
+    border: 1px solid #EEE;
+}
+
+.settings-box.open 
+{
+    left: 0;
+}
+
+.settings-box .toggle-settings
+{
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: #FFF;
+    padding: 8px 0;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.settings-box .toggle-settings .fa-gear
+{
+    padding: 8px 0;
+    width: 30px;
+    font-size: 20px;
+}
+
+.settings-box .settings-container .option-box 
+{
+    padding: 10px;
+    text-align: center;
+    background-color: #EEE;
+    margin: 10px;
+}
+
+.settings-box .settings-container .option-box  h4 
+{
+    margin: 0;
+    color: #666;
+}
+
+.settings-box .settings-container .option-box .colors-list 
+{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.settings-box .settings-container .option-box li
+{
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #EEE;
+    display: inline-block;
+}
+
+.settings-box .settings-container .option-box li.active 
+{
+    border: 3px solid #FFF;
+}
+
+.settings-box .settings-container .option-box li:first-child 
+{
+    background-color: #FF9800;
+}
+
+.settings-box .settings-container .option-box li:nth-child(2)
+{
+    background-color: #e91e63;
+}
+
+.settings-box .settings-container .option-box li:nth-child(3)
+{
+    background-color: #009688;
+}
+
+.settings-box .settings-container .option-box li:nth-child(4)
+{
+    background-color: #03a9f4;
+}
+
+.settings-box .settings-container .option-box li:nth-child(5)
+{
+    background-color: #4caf50;
+}
+
+.option-box .yes 
+{
+    background-color: green;
+    padding: 2px 6px;
+    color: #FFF;
+    border: 1px solid green;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.option-box .no
+{
+    cursor: pointer;
+    background-color: red;
+    padding: 2px 6px;
+    color: #FFF;
+    border: 1px solid red;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+/* End Settings Box  */
+
+/* Start Nav Bullets  */
+.nav-bullets 
+{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    z-index: 1000000;
+    display: none;
+}
+
+.nav-bullets .bullet 
+{
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--main-color);
+    margin: 20px auto;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-bullets .bullet .tooltip 
+{
+    background-color: var(--main-color);
+    width: 100px;
+    color: #FFF;
+    padding: 8px 10px;
+    position: absolute;
+    right: 32px;
+    top: -10px;
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    display: none;
+}
+
+.nav-bullets .bullet:hover .tooltip 
+{
+    display: block;
+}
+
+
+.nav-bullets .bullet .tooltip::before 
+{
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent var(--main-color);
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* End Nav Bullets  */
+
+
+/* Start Landing Page */
+.landing-page
+{
+    min-height: 100vh;
+    background-image: url(../images/wuhan.jpg);
+    background-size: cover;
+}
+
+.landing-page .overlay
+{
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.landing-page .header-area
+{
+    position: relative;
+    z-index: 2;
+    color: #FFF;
+    display: flex;
+    padding: 10px;
+}
+
+.landing-page .header-area .logo
+{
+    width: 300px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.landing-page .header-area .links
+{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.landing-page .header-area .links li 
+{
+    display: inline-block;
+    margin-left: 10px;
+
+}
+
+.landing-page .header-area .links li a 
+{
+    text-decoration: none;
+    color: #FFF;
+    transition: .3s;
+}
+
+.landing-page .header-area .links li a:hover,
+.landing-page .header-area .links li a.active
+{
+    color: var(--main-color)
+}
+
+.landing-page .intrdoduction-text
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #FFF;
+    text-align: center;
+    width: 100%;
+}
+
+.landing-page .intrdoduction-text .personal-image
+{
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 4px solid white;
+    border-radius: 100px;
+    background-image: url(../images/alaa.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing-page .intrdoduction-text h1
+{
+    font-size: 33px;
+    margin: 0 0 20px 0;
+    text-transform: capitalize;
+}
+
+.landing-page .intrdoduction-text h1 span 
+{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    text-decoration: none;
+}
+
+
+.landing-page .intrdoduction-text h2 
+{
+    font-size: 30px;
+    
+}
+
+.landing-page .intrdoduction-text .school 
+{
+    font-size: 22px;
+}
+
+.landing-page .intrdoduction-text .uni 
+{
+    font-size: 20px;
+}
+
+.landing-page .intrdoduction-text .school span, 
+.landing-page .intrdoduction-text .uni span 
+{
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End Landing Page */
+
+/* Start About Me */
+.about-me 
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.about-me .info-box
+{
+    flex: 1;
+    padding: 30px;
+}
+
+.about-me .info-box h2 
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 10px;
+}
+
+.about-me .info-box p
+{
+    line-height: 1.8;
+    color: #767676;
+    margin: 0;
+}
+
+.about-me .info-box button 
+{
+    display: inline-block;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    width: 75px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about-me .image-box 
+{
+    flex: 1;
+    text-align: center;
+}
+
+.about-me .image-box img 
+{
+    width: 400px;
+    height: 400px;
+}
+
+.about-me button a 
+{
+    text-decoration: none;
+    color: #FFF;
+}
+/* End About Me*/
+
+/* Start Timeline  */
+.timeline 
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+}
+
+.timeline .timeline-content 
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline .timeline-content::before 
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    margin-left: -1px;
+    background-color: var(--main-color);
+    top: 0;
+}
+
+.timeline .timeline-content .year 
+{
+    margin: 20px auto;
+    width: 50px;
+    background-color: var(--main-color);
+    position: relative;
+    z-index: 2;
+    border-radius: 40x;
+    text-align: center;
+    padding: 2px 5px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.timeline .timeline-content .left,
+.timeline .timeline-content .right 
+{
+    width: calc(50% - 25px);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline .timeline-content .left 
+{
+    float: left;
+}
+
+.timeline .timeline-content .left::before, 
+.timeline .timeline-content .right::before
+{
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #FFF;
+    border: 3px solid var(--main-color);
+    position: absolute;
+    
+    border-radius: 50%;
+    top: 20px;
+}
+
+.timeline .timeline-content .left::before
+{
+    right: -35px;
+}
+
+
+.timeline .timeline-content .right::before
+{
+    left: -35px;
+}
+
+.timeline .timeline-content .right 
+{
+    float: right;
+}
+
+.timeline .timeline-content .content 
+{
+    padding: 20px;
+    background-color: #FFF;
+    /* min-height: 250px; */
+}
+
+.timeline .timeline-content h3 
+{
+    color: var(--main-color);
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.timeline .timeline-content p 
+{
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.clearfix 
+{
+    clear: both;
+}
+
+.timeline .timeline-content .left .content::before 
+{
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent #FFF;
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 20px;
+
+}
+
+.timeline .timeline-content .right .content::before 
+{
+    content: '';
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent #FFF transparent transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+
+}
+/* End Timeline  */
+
+/* Start Teaching  */
+.teaching 
+{
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.teaching::before 
+{
+    content: '';
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    height: 100%;
+}
+
+.teaching::after 
+{
+    content: '';
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #333;
+    height: 100%;
+}
+
+.teaching h2 
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: #FFF;
+    margin: 0 0 60px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.teaching .teaching-box 
+{
+    position: relative;
+    z-index: 2;
+    width: calc(98% / 3);
+    float: left;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #CCC;
+}
+
+.teaching .teaching-box:not(:last-of-type)
+{
+    margin-right: 1%;
+}
+
+.teaching .teaching-box > p 
+{
+    margin: 0 0 20px;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #707070;
+    font-style: italic;
+}
+
+.teaching .teaching-box .uni-info 
+{
+    overflow: hidden;
+}
+
+.teaching .teaching-box .uni-info img 
+{
+    float: left;
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+}
+
+.teaching .teaching-box .uni-info h4 
+{
+    margin: 14px 0 5px;
+}
+
+.teaching .teaching-box .uni-info p 
+{
+    color: #707070;
+    margin: 0;
+}
+/* End Teaching  */
+
+/* Start Skills  */
+.skills 
+{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #EEE;
+    /* display: flex; */
+}
+
+.skills h2 
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 50px;
+    text-align: center;
+
+}
+
+.skills .skills-box 
+{
+    background-color: #FFF;
+    display: flex;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.skills .skills-box .skill-name 
+{
+    font-weight: bold;
+    width: 170px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.skills .skills-box .skill-progress 
+{
+    height: 15px;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .skills-box .skill-progress span 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: all .3s;
+}
+
+/* End Skills  */
+
+/* Start Contact Me  */
+.contact 
+{
+    min-height: 600px;
+    background-image: url('../images/contact.gif');
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;;
+}
+
+.contact .overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.contact .container 
+{
+    position: relative;
+    z-index: 2;
+}
+
+.contact .social 
+{
+    margin: 0px 400px
+}
+
+.contact h2 
+{
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--main-color);
+    margin: 0 0 60px;
+    text-align: center;
+}
+
+.contact .all 
+{
+    width: 400px;
+    height: 50px;
+    border: 3px solid #F00;
+    border-radius: 40px;
+    /* text-align: center; */
+    line-height: 50px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    color: #676767;
+}
+
+.contact .all i 
+{
+    font-weight: bold;
+    color: #00f;
+    margin-right: 10px;
+    position: relative;
+}
+
+.contact .all i::after
+{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 24px;
+    color: #FFF;
+    background: #000;
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+.contact .wechat 
+{
+    border-color: #09B83E;
+}
+.fa-weixin 
+{
+    color: #09B83E !important;
+}
+
+.contact .whatsapp
+{
+    border-color: #25d366;
+}
+.fa-whatsapp
+{
+    color: #25d366 !important;
+}
+
+.contact .facebook
+{
+    border-color: #1877f2;
+}
+.fa-facebook-square
+{
+    color: #1877f2 !important;
+}
+
+.contact .twitter
+{
+    border-color: #1da1f2;
+}
+.fa-twitter
+{
+    color: #1da1f2 !important;
+}
+
+.contact .gmail
+{
+    border-color: #db4437;
+}
+.fa-google
+{
+    color: #db4437 !important;
+}
+
+/* End Contact Me  */
+
+/* Start Footer  */
+.footer 
+{
+    background-color: #333;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+}
+/* End Footer  */
